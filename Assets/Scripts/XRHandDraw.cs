@@ -36,6 +36,8 @@ public class XRHandDraw : MonoBehaviour
 
     private Transform intexfinger;
 
+    public TubeManager manager;
+
     private void Start()
     {
         ovrHand = trackingHand.GetComponent<OVRHand>();
@@ -77,6 +79,8 @@ public class XRHandDraw : MonoBehaviour
         goTubeRenderer._sides = tubeSides;
 
         currentTubeRenderer = goTubeRenderer;
+
+        manager.GetTubes().Add(go);
     }
 
     private void CheckPinchState()

@@ -9,15 +9,18 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MRSceneObjectVolumeMaterial
   m_Shader: {fileID: 4800000, guid: b0b4d9b7641b02f45a805c4a4ad9048a, type: 3}
-  m_ValidKeywords:
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -63,6 +66,6 @@ Material:
     - _Surface: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.23529412, g: 0.44313726, b: 0.6039216, a: 0.57254905}
+    - _BaseColor: {r: 0.23529407, g: 0.44313723, b: 0.6039216, a: 0.078431375}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

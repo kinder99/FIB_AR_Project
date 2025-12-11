@@ -82,7 +82,6 @@ public class TubeRenderer : MonoBehaviour
         hg.InjectRigidbody(rb);
         hg.InjectOptionalPointableElement(g);
         HandGrabInteractable.Registry.Register(hg);
-        
     }
 
     private void OnEnable()
