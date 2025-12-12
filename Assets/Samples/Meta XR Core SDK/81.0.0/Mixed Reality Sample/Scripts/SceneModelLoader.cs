@@ -44,6 +44,8 @@ public class SceneModelLoader : MonoBehaviour
     [SerializeField] private bool _loadPlanes = true;
     [SerializeField] private bool _loadVolumes = true;
 
+    [SerializeField] private GameObject prefab;
+
     void Start()
     {
         LoadSceneModel();
@@ -114,6 +116,15 @@ public class SceneModelLoader : MonoBehaviour
             planeTransform.gameObject.SetActive(false);
             var meshTransform = gObj.transform.GetChild(2);
             meshTransform.gameObject.SetActive(false);
+
+            GameObject pObj = null;
+            if (gObj.name == "Couch")
+            {
+                pObj = GameObject.Instantiate(prefab);
+                //pObj.transform.SetParent(gObj.transform);
+                pObj.transform.position = gObj.transform.position + new Vector3(0f,1f,0f);
+                //pObj.GetComponent<Rigidbody>().useGravity = false;
+            }
 
             // activate and populate Unity object with Scene object data
             // different objects have different data (volumes, planes, meshes)

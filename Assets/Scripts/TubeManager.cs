@@ -32,10 +32,21 @@ public class TubeManager : MonoBehaviour
         foreach (GameObject t in tubes) { 
             t.GetComponent<Renderer>().material.color = colors[index];
         }
+        Debug.Log("color cycled");
     }
 
     public void EnableDraw()
     {
         draw.enabled = !draw.enabled;
+    }
+
+    public void EraseOldest()
+    {
+        if(tubes.Count >= 2)
+        {
+            Destroy(tubes[0]);
+            tubes.RemoveAt(0);
+        }
+            
     }
 }
